@@ -24,15 +24,11 @@ with st.sidebar:
     source_img = st.file_uploader(
         "Unggah Citra...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
 
-    # Model Options
-    confidence = float(st.slider(
-        "Pilih Tingkat Confidence Model", 25, 100, 40)) / 100
-
 # Creating main page heading
-colT1,colT2 = st.columns([1,8])
-with colT2:
-    st.title("Selamat Datang di Aplikasi Website Deteksi Kapal")
-    st.caption('Unggah citra satelit untuk mendeteksi kapal')
+st.title("\tSelamat Datang di Aplikasi Website Deteksi Kapal")
+st.caption('Purwarupa perangkat lunak untuk mendeteksi kapal dari citra satelit yang dikembangkan oleh Program Studi Fisika, Fakultas MIPA, Universitas Jenderal Soedirman Purwokerto')
+st.caption('Silakan unggah citra satelit Anda pada sidebar dan klik tombol "Deteksi Kapal" untuk melihat hasil pendeteksian kapal pada citra satelit')
+st.divider()
 # Creating two columns on the main page
 col1, col2 = st.columns(2)
 
@@ -46,6 +42,13 @@ with col1:
                  caption="Citra Masukan",
                  use_column_width=True
                  )
+    else:
+        image = PIL.Image.open('./imgs/paper.png')
+
+        st.caption("\n")
+        st.image(image, caption='Published Paper')
+        st.caption("Aminuddin, J., Abdullatif, R. F., Anggraini, E. I., Gumelar, S. F., & Rahmawati, A. (2023). Development of convolutional neural network algorithm on ships detection in Natuna Islands-Indonesia using land look satellite imagery. Remote Sensing Applications: Society and Environment, 32, 101025.")
+
 
 try:
     model = YOLO(model_path)
@@ -56,7 +59,11 @@ except Exception as ex:
 
 if st.sidebar.button('Deteksi Kapal'):
     res = model.predict(uploaded_image,
-                        conf=confidence
+                        conf=0.3,
+                        verbose=False,
+                        show_conf=False,
+                        show_labels=False,
+                        boxes=False
                         )
     boxes = res[0].boxes
     res_plotted = res[0].plot()[:, :, ::-1]
@@ -71,4 +78,10 @@ if st.sidebar.button('Deteksi Kapal'):
         with BytesIO() as f:
             im.save(f, format='JPEG')
             data = f.getvalue()
-        st.download_button(label='Download Citra',data=data,file_name='change_bg.jpg')
+        st.download_button(label='Download Citra',data=data,file_name=f'ship_detection_{source_img.name.split(".")[0]}.jpg')
+else:
+    with col2:
+        image = PIL.Image.open('./imgs/cnn.png')
+
+        st.caption("\n")
+        st.image(image, caption='CNN Architecture')
