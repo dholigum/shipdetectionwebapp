@@ -29,8 +29,10 @@ with st.sidebar:
         "Pilih Tingkat Confidence Model", 25, 100, 40)) / 100
 
 # Creating main page heading
-st.title("Selamat Datang di Aplikasi Website Deteksi Kapal")
-st.caption('Unggah citra satelit untuk mendeteksi kapal')
+colT1,colT2 = st.columns([1,8])
+with colT2:
+    st.title("Selamat Datang di Aplikasi Website Deteksi Kapal")
+    st.caption('Unggah citra satelit untuk mendeteksi kapal')
 # Creating two columns on the main page
 col1, col2 = st.columns(2)
 
