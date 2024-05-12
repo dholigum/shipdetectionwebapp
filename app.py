@@ -43,7 +43,7 @@ with header_col2:
         **Contact Person**
         Jamrud Aminuddin
         WA: 087829679471
-        e-mail: jamrud.aminuddin@unsoed.ac.id""")
+        e-mail: jamrud.aminuddin@unsoed.ac.id""", unsafe_allow_html=True)
 
 st.divider()
 # Creating two columns on the main page
