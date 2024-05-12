@@ -24,22 +24,19 @@ with st.sidebar:
     source_img = st.file_uploader(
         "Unggah Citra...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
 
-# Creating main page heading
-st.title("\tSELAMAT DATANG DI APLIKASI WEBSITE DETEKSI KAPAL")
-
 # Creating two columns on the header page
 header_col1, header_col2 = st.columns(2)
 
 with header_col1:
-    subheader_col1, subheader_col2 = st.columns(2)
-    with subheader_col1:
-        logo = PIL.Image.open('./imgs/unsoed_logo.jpeg')
-        st.image(logo)
-    with subheader_col2:
-        header = PIL.Image.open('./imgs/header.jpeg')
-        st.image(header)
+    logo = PIL.Image.open('./imgs/unsoed_logo.jpeg')
+    st.image(logo)
+    
+    header = PIL.Image.open('./imgs/header.jpeg')
+    st.image(header)
 
 with header_col2:
+    # Creating main page heading
+    st.title("\tSELAMAT DATANG DI APLIKASI WEBSITE DETEKSI KAPAL")
     st.caption('Perangkat lunak untuk mendeteksi kapal dari citra satelit yang dikembangkan oleh Kelompok Minat Khusus Fisika Komputasi dan Instrumentasi, Jurusan Fisika, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Jenderal Soedirman Purwokerto')
     st.caption('Silakan unggah citra satelit Anda pada sidebar dan klik tombol "Deteksi Kapal" untuk melihat hasil pendeteksian kapal pada citra satelit')
 
