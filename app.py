@@ -25,7 +25,7 @@ with st.sidebar:
         "Unggah Citra...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
 
 # Creating two columns on the header page
-header_col1, header_col2 = st.columns([1, 3])
+header_col1, header_col2 = st.columns([1, 5])
 
 with header_col1:
     logo = PIL.Image.open('./imgs/unsoed_logo.jpeg')
