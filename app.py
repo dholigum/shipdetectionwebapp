@@ -45,9 +45,9 @@ with col1:
     else:
         image = PIL.Image.open('./imgs/thumbnail.jpeg')
 
-        st.caption("\n")
-        st.image(image, caption='Published Paper')
-        st.caption("Aminuddin, J., Abdullatif, R. F., Anggraini, E. I., Gumelar, S. F., & Rahmawati, A. (2023). Development of convolutional neural network algorithm on ships detection in Natuna Islands-Indonesia using land look satellite imagery. Remote Sensing Applications: Society and Environment, 32, 101025.")
+        #st.caption("\n")
+        #st.image(image, caption='Published Paper')
+        #st.caption("Aminuddin, J., Abdullatif, R. F., Anggraini, E. I., Gumelar, S. F., & Rahmawati, A. (2023). Development of convolutional neural network algorithm on ships detection in Natuna Islands-Indonesia using land look satellite imagery. Remote Sensing Applications: Society and Environment, 32, 101025.")
 
 
 try:
