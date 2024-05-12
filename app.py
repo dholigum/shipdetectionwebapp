@@ -39,7 +39,11 @@ with header_col2:
     st.title("\tSELAMAT DATANG DI APLIKASI WEBSITE DETEKSI KAPAL")
     st.caption('Perangkat lunak untuk mendeteksi kapal dari citra satelit yang dikembangkan oleh Kelompok Minat Khusus Fisika Komputasi dan Instrumentasi, Jurusan Fisika, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Jenderal Soedirman Purwokerto')
     st.caption('Silakan unggah citra satelit Anda pada sidebar dan klik tombol "Deteksi Kapal" untuk melihat hasil pendeteksian kapal pada citra satelit')
-    st.caption('Contact Person\nJamrud Aminuddin\nWA: 087829679471\ne-mail: jamrud.aminuddin@unsoed.ac.id')
+    st.caption("""
+        **Contact Person**
+        Jamrud Aminuddin
+        WA: 087829679471
+        e-mail: jamrud.aminuddin@unsoed.ac.id""")
 
 st.divider()
 # Creating two columns on the main page
