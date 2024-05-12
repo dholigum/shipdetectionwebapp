@@ -25,7 +25,7 @@ with st.sidebar:
         "Unggah Citra...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
 
 # Creating main page heading
-st.title("\tSelamat Datang di Aplikasi Website Deteksi Kapal")
+st.title("\tSELAMAT DATANG DI APLIKASI WEBSITE DETEKSI KAPAL")
 st.caption('Purwarupa perangkat lunak untuk mendeteksi kapal dari citra satelit yang dikembangkan oleh Program Studi Fisika, Fakultas MIPA, Universitas Jenderal Soedirman Purwokerto')
 st.caption('Silakan unggah citra satelit Anda pada sidebar dan klik tombol "Deteksi Kapal" untuk melihat hasil pendeteksian kapal pada citra satelit')
 st.divider()
