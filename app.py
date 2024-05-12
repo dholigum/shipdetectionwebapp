@@ -43,7 +43,7 @@ with col1:
                  use_column_width=True
                  )
     else:
-        image = PIL.Image.open('./imgs/paper.png')
+        image = PIL.Image.open('./imgs/thumbnail.png')
 
         st.caption("\n")
         st.image(image, caption='Published Paper')
