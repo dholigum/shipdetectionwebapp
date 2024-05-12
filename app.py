@@ -45,8 +45,8 @@ with col1:
     else:
         image = PIL.Image.open('./imgs/thumbnail.jpeg')
 
-        #st.caption("\n")
-        #st.image(image, caption='Published Paper')
+        st.caption("\n")
+        st.image(image, caption='')
         #st.caption("Aminuddin, J., Abdullatif, R. F., Anggraini, E. I., Gumelar, S. F., & Rahmawati, A. (2023). Development of convolutional neural network algorithm on ships detection in Natuna Islands-Indonesia using land look satellite imagery. Remote Sensing Applications: Society and Environment, 32, 101025.")
 
 
@@ -84,4 +84,4 @@ else:
         image = PIL.Image.open('./imgs/cnn.png')
 
         st.caption("\n")
-        st.image(image, caption='CNN Architecture')
+        st.image(image, caption='Arsitektur CNN (Convolutional Neural Network')
